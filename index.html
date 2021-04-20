@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>¿Quieres ser mi novia?</title>
+	<link rel="icon" type="img/jpg" href="isotipo.png">
+	<link rel="stylesheet" href="index.css">
+	<meta name="viewport" content="width=device-width, initial-scale=0.75">
+	<script src="https://kit.fontawesome.com/89addf49e6.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+  			$(".no").hover(function(){
+    			arriba =  Math.random() * (300 - 1) + 1;
+    			abajo =  Math.random() * (480 - 1) + 1;
+    		$(this).css("top", arriba);
+    		$(this).css("left", abajo);
+    		});
+		});
+		function si(){
+    		document.getElementById("ansyes").style.display = "block";
+		}
+		function no(){
+			document.getElementById("ansyes").style.display = "none";
+		}
+	</script>
+</head>
+<body>
+	<div class="content"></div>
+	<div class="message">
+		<div class="question">
+			<h1>¿Quieres ser mi novia?</h1>
+		</div>
+		<div class="answers">
+			<p onclick="si()" class="yes">Si</p>
+			<p class="no">No</p>
+		</div>
+	</div>
+	<div id="ansyes">
+		<img src="miau.jpg" width="70%">
+		<h2>Sabia que aceptarias 7w7</h2>
+		<i onclick="no()" class="fas fa-times-circle"></i>
+	</div>
+	<div class="credits">
+		<p>Powered by</p>
+		<a href="https://www.instagram.com/uzieltecuab/" target="_blank">Uziel</a>
+	</div>
+</body>
+</html>
